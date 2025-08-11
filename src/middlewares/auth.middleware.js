@@ -3,6 +3,8 @@ import { ApiError } from "../utils/ApiError.util.js"
 import { asyncHendler } from "../utils/AsyncHendler.util.js"
 import jwt from "jsonwebtoken"
 
+// added to check git commit
+
 export const verifyJWT = asyncHendler(async(req,res,next)=>{
    
     try{
