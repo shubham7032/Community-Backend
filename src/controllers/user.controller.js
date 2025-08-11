@@ -167,7 +167,7 @@ const refreshAccessToken = asyncHendler( async(req,res)=>{
 
     console.log(decoedAccessToken._id)
 
-    const {accessToken,refreshToken}= await generateAccessAndRefreshToken(decoedAccessToken._id)
+    const {accessToken,refreshToken}= await  (decoedAccessToken._id)
    
     const options = {
         httpOnly: true,
@@ -215,7 +215,7 @@ console.log(email,fullName)
         throw new ApiError(400,"All fields are require")
     }
 
-    const user =await User.findByIdAndUpdate(req.user?._id,{
+    const user = await User.findByIdAndUpdate(req.user?._id,{
         $set:{
             fullName,
             email
